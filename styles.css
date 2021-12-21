@@ -1,9 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
 #app {
     font-family: Roboto, sans-serif;
+    background-color: lightgray;
 }
 
 .header {
     text-align: center;
+    border: 3px solid black;
+    background-color: lightblue;
+    padding: 1em;
 }
 
 .game-card {
@@ -11,6 +19,7 @@
     border: 1px solid black;
     padding: 2em;
     margin: 1em;
+    background-color: lightblue;
 }
 
 .form {
