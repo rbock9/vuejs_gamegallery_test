@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameGallery</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <div id="app">
+        <div class="header">
+            <h1>GameGallery</h1>
+            <button v-on:click="getGames">Get Games</button>
+        </div>
+        <form class="form">
+            <input v-model="title" type="text" placeholder="enter game title">
+            <input v-model="imagelink" type="url" placeholder="enter game image url">
+            <input v-model="developer" type="text" placeholder="enter game developer">
+            <input v-model="publisher" type="text" placeholder="enter game publisher">
+            <input v-model="platform" type="text" placeholder="enter game platform">
+            <input v-model="release" type="text" placeholder="enter game release date">
+            <input v-model="summary" type="text" placeholder="enter game summary">
+            <button v-on:click="createGames">Create New Game</button>
+        </form>
+        <div class="game-card" v-for="game in games">
+            <h1>{{game.title}}</h1>
+            <img v-bind:src="game.imagelink"/>
+            <h3>Developer(s): {{game.developer}}</h3>
+            <h3>Publisher(s): {{game.publisher}}</h3>
+            <h3>Platform(s): {{game.platform}}</h3>
+            <h3>Release Date: {{game.release}}</h3>
+            <p>Summary: {{game.summary}}</p>
+        </div>
+    </div>
+</body>
+</html>

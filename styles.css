@@ -1,0 +1,33 @@
+#app {
+    font-family: Roboto, sans-serif;
+}
+
+.header {
+    text-align: center;
+}
+
+.game-card {
+    text-align: center;
+    border: 1px solid black;
+    padding: 2em;
+    margin: 1em;
+}
+
+.form {
+    border: 1px solid black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 2px 2px;
+}
